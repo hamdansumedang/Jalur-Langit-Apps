@@ -2,27 +2,36 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- optional: menetapkan base jika Anda suka -->
+    <!-- optional: menetapkan base supaya semua path relatif ke nama repo -->
     <base href="/Jalur-Langit-Apps/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pemesanan Shuttle & Tur Pribadi</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
-<link rel="stylesheet" href="/index.css">
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0",
-    "recharts": "https://aistudiocdn.com/recharts@^3.3.0"
-  }
-}
-</script>
-  <script type="module" crossorigin src="/assets/index-DU5OwA07.js"></script>
-</head>
+    <!-- Favicon: ubah kalau file favicon tidak ada; atau hapus baris ini -->
+    <link rel="icon" type="image/svg+xml" href="assets/vite.svg" />
+
+    <!-- CSS: pastikan file index.css ada di root atau pindahkan ke assets dan sesuaikan
+         contoh di bawah mengasumsikan index.css ada di root (repo/Jalur-Langit-Apps/index.css)
+    -->
+    <link rel="stylesheet" href="index.css">
+
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0",
+        "recharts": "https://aistudiocdn.com/recharts@^3.3.0"
+      }
+    }
+    </script>
+
+    <!-- Module script: gunakan path RELATIF (tanpa leading slash) -->
+    <link rel="modulepreload" href="assets/index-DU5OwA07.js">
+    <script type="module" crossorigin src="assets/index-DU5OwA07.js"></script>
+  </head>
   <body class="bg-gray-900 text-white">
     <div id="root"></div>
   </body>
